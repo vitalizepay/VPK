@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
   <meta charset="utf-8">
@@ -6,180 +6,842 @@
   <title>வி. பி. கந்தவேல் — சூலூருக்கான சமூக சேவை</title>
   <meta name="description" content="வி. பி. கந்தவேல் அவர்களின் அதிகாரப்பூர்வ இணையதளம் — சூலூரில் சமூக மேம்பாடு, தூய்மையான குடிநீர், கல்வி மற்றும் மருத்துவ சேவைகள்.">
   <link rel="canonical" href="https://example.com/index-ta.html">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <meta property="og:type" content="website">
   <meta property="og:title" content="வி. பி. கந்தவேல் — சூலூருக்கான சமூக சேவை">
   <meta property="og:description" content="சூலூரில் சமூக மேம்பாடு, தூய்மையான குடிநீர், கல்வி மற்றும் மருத்துவ சேவைகள்.">
-  <meta property="og:image" content="/assets/img/hero-tamil.jpg">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Person", "name": "வி. பி. கந்தவேல்", "image": "/assets/img/kandhavel.jpg", "jobTitle": "பொது சேவகர்", "url": "https://example.com/", "sameAs": ["https://www.facebook.com/VpkKandavel/"], "address": {"@type": "PostalAddress", "addressLocality": "சூலூர்", "addressRegion": "தமிழ்நாடு", "addressCountry": "IN"}}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "வி. பி. கந்தவேல்",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "jobTitle": "பொது சேவகர்",
+    "url": "https://example.com/",
+    "sameAs": ["https://www.facebook.com/VpkKandavel/"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "சூலூர்",
+      "addressRegion": "தமிழ்நாடு",
+      "addressCountry": "IN"
+    }
+  }
   </script>
   <style>
-    /* Adding smooth scroll behavior */
+    :root {
+      --primary: #1a73e8;
+      --primary-dark: #0d47a1;
+      --secondary: #34a853;
+      --accent: #fbbc04;
+      --light: #f8f9fa;
+      --dark: #202124;
+      --gray: #5f6368;
+      --transition: all 0.3s ease;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-hover: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
-    /* Simple styling for section padding for better visual separation */
-    section {
-      padding: 60px 0;
-      border-bottom: 1px solid #eee;
+    
+    body {
+      font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #ffffff;
+      overflow-x: hidden;
     }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    
+    h2:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .section:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: white;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--dark);
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav a {
+      margin: 0 12px;
+      padding: 8px 12px;
+      font-weight: 600;
+      position: relative;
+      color: var(--dark);
+    }
+    
+    .nav a:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav a:hover:after,
+    .nav a.active:after {
+      width: 100%;
+    }
+    
+    .nav a.active {
+      color: var(--primary);
+    }
+    
+    .nav a.btn {
+      margin-left: 15px;
+      color: white;
+    }
+    
+    /* Hero Section */
     .hero {
-      padding-top: 80px; /* Adjust for fixed header if any */
+      padding-top: 120px;
+      padding-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
     }
-    footer.site-footer {
-        padding: 40px 0;
+    
+    .hero:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 0.9;
+      border-radius: 0 0 0 100px;
+    }
+    
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-dark);
+      line-height: 1.2;
+    }
+    
+    .hero-text p {
+      font-size: 1.2rem;
+      color: var(--dark);
+      max-width: 90%;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .metrics {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .metric {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+    }
+    
+    .metrics div {
+      text-align: center;
+    }
+    
+    .metrics span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+    
+    /* About Section */
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .about-image {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .about-image:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .about-text {
+      flex: 2;
+    }
+    
+    /* Initiatives */
+    .initiatives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .initiative-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      height: 100%;
+    }
+    
+    .initiative-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .initiative-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .initiative-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .initiative-card:hover .initiative-image img {
+      transform: scale(1.05);
+    }
+    
+    .initiative-content {
+      padding: 25px;
+    }
+    
+    .initiative-content h3 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 250px;
+      position: relative;
+      box-shadow: var(--shadow);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 20px;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    /* Callout */
+    .callout {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .callout:before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    }
+    
+    .callout-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .callout h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .callout h2:after {
+      background: var(--accent);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .callout p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Footer */
+    .site-footer {
+      background: var(--dark);
+      color: white;
+      padding: 60px 0 30px;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-col h4 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+    
+    .footer-col p {
+      color: #bdc1c6;
+    }
+    
+    .list-plain {
+      list-style: none;
+    }
+    
+    .list-plain li {
+      margin-bottom: 12px;
+    }
+    
+    .list-plain a {
+      color: #bdc1c6;
+    }
+    
+    .list-plain a:hover {
+      color: white;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #9aa0a6;
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero:before {
+        display: none;
+      }
+      
+      .about-content {
+        flex-direction: column;
+      }
+      
+      .metrics {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      
+      .nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        transform: translateY(-150%);
+        transition: var(--transition);
+      }
+      
+      .nav.active {
+        transform: translateY(0);
+      }
+      
+      .nav a {
+        margin: 10px 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.7rem;
+      }
+      
+      .hero {
+        padding-top: 100px;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
-<a class="skip-link" href="#main">உள்ளடக்கத்திற்குச் செல்க</a>
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="#home">
-      <span class="brand-logo" aria-hidden="true">VPK</span>
-      <span class="brand-text">வி. பி. கந்தவேல்</span>
-    </a>
-    <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="வழிசெலுத்தலை நிலைமாற்று">☰</button>
-    <nav id="nav" class="nav" aria-label="முதன்மை">
-      <a href="#home">முகப்பு</a>
-      <a href="#about">எங்களைப் பற்றி</a>
-      <a href="#initiatives">முயற்சிகள்</a>
-      <a href="#gallery">புகைப்படங்கள்</a>
-      <a href="#contact">தொடர்புக்கு</a>
-      <a class="btn btn-primary" href="#volunteer">தன்னார்வலராகுங்கள்</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-
-<section id="home" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <h1>மக்களின் நம்பிக்கை. உண்மையான சேவை.</h1>
-      <p>சூலூரின் ஒவ்வொரு பகுதிக்கும் தூய்மையான குடிநீர், கல்வி உதவி மற்றும் மருத்துவ வசதிகளை అందిస్తున్నோம்.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#initiatives">முயற்சிகளைக் காண்க</a>
-        <a class="btn btn-outline" href="#volunteer">தன்னார்வலராக சேர</a>
+  <a class="skip-link" href="#main">உள்ளடக்கத்திற்குச் செல்க</a>
+  
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-logo" aria-hidden="true">VPK</span>
+        <span class="brand-text">வி. பி. கந்தவேல்</span>
+      </a>
+      <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="வழிசெலுத்தலை நிலைமாற்று">☰</button>
+      <nav id="nav" class="nav" aria-label="முதன்மை">
+        <a href="#home" class="active">முகப்பு</a>
+        <a href="#about">எங்களைப் பற்றி</a>
+        <a href="#initiatives">முயற்சிகள்</a>
+        <a href="#gallery">புகைப்படங்கள்</a>
+        <a href="#contact">தொடர்புக்கு</a>
+        <a class="btn btn-primary" href="#volunteer">தன்னார்வலராகுங்கள்</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text animate-on-scroll">
+          <h1>மக்களின் நம்பிக்கை. உண்மையான சேவை.</h1>
+          <p>சூலூரின் ஒவ்வொரு பகுதிக்கும் தூய்மையான குடிநீர், கல்வி உதவி மற்றும் மருத்துவ வசதிகளை அందిస్తున్నோம்.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#initiatives">முயற்சிகளைக் காண்க</a>
+            <a class="btn btn-outline" href="#volunteer">தன்னார்வலராக சேர</a>
+          </div>
+          <div class="metrics">
+            <div><span class="metric">120+</span><span>சரிசெய்யப்பட்ட குடிநீர் இணைப்புகள்</span></div>
+            <div><span class="metric">35</span><span>கல்வி உதவித்தொகைகள்</span></div>
+            <div><span class="metric">60+</span><span>இலவச மருத்துவ முகாம்கள்</span></div>
+          </div>
+        </div>
       </div>
-      <div class="metrics">
-        <div><span class="metric">120+</span><span>சரிசெய்யப்பட்ட குடிநீர் இணைப்புகள்</span></div>
-        <div><span class="metric">35</span><span>கல்வி உதவித்தொகைகள்</span></div>
-        <div><span class="metric">60+</span><span>இலவச மருத்துவ முகாம்கள்</span></div>
+    </section>
+    
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">எங்களைப் பற்றி</h2>
+        <div class="about-content">
+          <div class="about-image animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="வி. பி. கந்தவேல்">
+          </div>
+          <div class="about-text animate-on-scroll">
+            <h3>வி. பி. கந்தவேல்: ஒரு சமூக சேவகர்</h3>
+            <p>வி. பி. கந்தவேல், சூலூர் பகுதியின் முன்னேற்றத்திற்காக தன்னை அர்ப்பணித்துக் கொண்ட ஒரு பொது சேவகர். கடந்த பல ஆண்டுகளாக, மக்களின் அடிப்படைத் தேவைகளான குடிநீர், கல்வி மற்றும் சுகாதாரம் ஆகியவற்றை மேம்படுத்துவதில் கவனம் செலுத்தி வருகிறார். மக்களின் நம்பிக்கையை மூலதனமாகக் கொண்டு, உண்மையான சேவையை வழங்குவதே தனது தலையாய கடமை என்று நம்புகிறார்.</p>
+            <p>அவரது தலைமையின் கீழ், பல கிராமங்களில் பழுதடைந்த குடிநீர் குழாய்கள் சரிசெய்யப்பட்டு, மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கப்பட்டு, நூற்றுக்கணக்கான மருத்துவ முகாம்கள் நடத்தப்பட்டுள்ளன. சூலூரை ஒரு முன்மாதிரி தொகுதியாக மாற்றுவதே அவரது இலக்கு.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="initiatives" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">எங்கள் முக்கிய முயற்சிகள்</h2>
+        <div class="initiatives-grid">
+          <div class="initiative-card animate-on-scroll">
+            <div class="initiative-image">
+              <img src="https://images.unsplash.com/photo-1509310202330-aec2a1bcd56c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="தூய்மையான குடிநீர் திட்டம்">
+            </div>
+            <div class="initiative-content">
+              <h3>தூய்மையான குடிநீர்</h3>
+              <p>குழாய்களைப் பழுதுபார்த்தல், கைப்பம்புகளை சரிசெய்தல் மற்றும் பாதுகாப்பான குடிநீர் கிடைப்பதை உறுதி செய்தல். கிராமங்களில் தூய்மையான குடிநீர் வழங்கும் திட்டங்களை செயல்படுத்துதல்.</p>
+            </div>
+          </div>
+          
+          <div class="initiative-card animate-on-scroll">
+            <div class="initiative-image">
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="கல்வி ஆதரவு">
+            </div>
+            <div class="initiative-content">
+              <h3>கல்வி</h3>
+              <p>சூலூர் பகுதி மாணவர்களுக்கு கல்வி உதவித்தொகை, நோட்டுப் புத்தகங்கள் மற்றும் உயர்கல்விக்கான வழிகாட்டுதல். மாணவர்களின் கல்வி வளர்ச்சிக்கு தேவையான வசதிகளை வழங்குதல்.</p>
+            </div>
+          </div>
+          
+          <div class="initiative-card animate-on-scroll">
+            <div class="initiative-image">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="மருத்துவ முகாம்கள்">
+            </div>
+            <div class="initiative-content">
+              <h3>மருத்துவம்</h3>
+              <p>கிராமப்புற மக்களுக்காக மருத்துவர்களுடன் இலவச மருத்துவ பரிசோதனை முகாம்கள் மற்றும் நடமாடும் மருத்துவமனைகள். பொது சுகாதாரத்தை மேம்படுத்துவதற்கான நடவடிக்கைகள்.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">சேவையின் சில தருணங்கள்</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="மக்களுடன் கலந்துரையாடல்">
+            <div class="gallery-overlay">
+              <h3>மக்களுடன் கலந்துரையாடல்</h3>
+            </div>
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="கல்வி உபகரணங்கள் வழங்குதல்">
+            <div class="gallery-overlay">
+              <h3>கல்வி உபகரணங்கள் வழங்குதல்</h3>
+            </div>
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1562077772-3bd90403f7f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="குடிநீர் திட்ட தொடக்கம்">
+            <div class="gallery-overlay">
+              <h3>குடிநீர் திட்ட தொடக்கம்</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="volunteer" class="callout">
+      <div class="container callout-inner">
+        <h2 class="animate-on-scroll">ஒன்றிணைந்து ஒவ்வொரு தெருவையும் உயர்த்துவோம்.</h2>
+        <p class="animate-on-scroll">எங்கள் தன்னார்வலர் குழுவில் நீங்களும் ஒரு பகுதியாகுங்கள். முகாம்களை ஏற்பாடு செய்யவும், உள்ளூர் பிரச்சினைகளைக் கண்டறியவும், மாற்றத்தை ஏற்படுத்தவும் உதவுங்கள்.</p>
+        <a class="btn btn-outline animate-on-scroll" href="#contact">தன்னார்வலராகுங்கள்</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col animate-on-scroll">
+          <h4>வி. பி. கந்தவேல்</h4>
+          <p>சூலூரில் சமூக சேவைக்காக அர்ப்பணிப்பு — தூய்மையான குடிநீர், கல்வி, மருத்துவம் மற்றும் சமூக மேம்பாடு.</p>
+        </div>
+        
+        <div class="footer-col animate-on-scroll">
+          <h4>விரைவு இணைப்புகள்</h4>
+          <ul class="list-plain">
+            <li><a href="#about">எங்களைப் பற்றி</a></li>
+            <li><a href="#initiatives">முயற்சிகள்</a></li>
+            <li><a href="#gallery">புகைப்படங்கள்</a></li>
+            <li><a href="#volunteer">தன்னார்வலராகுங்கள்</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col animate-on-scroll">
+          <h4>தொடர்புக்கு</h4>
+          <ul class="list-plain">
+            <li><a href="https://www.facebook.com/VpkKandavel/" target="_blank" rel="noopener">முகநூல்</a></li>
+            <li><a href="mailto:contact.vpk@example.com">contact.vpk@example.com</a></li>
+            <li><a href="tel:+919841373309">+91 98413 73309</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>© <span id="year"></span> வி. பி. கந்தவேல். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
       </div>
     </div>
-    <div class="hero-media">
-      <img src="https://i.imgur.com/8Qp4wYh.jpeg" alt="சூலூரில் சமூக ஒன்றுகூடல்">
-    </div>
-  </div>
-</section>
-
-<section id="about">
-    <div class="container">
-        <h2>எங்களைப் பற்றி</h2>
-        <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px;">
-                <img src="https://i.imgur.com/uJ3xQeB.jpeg" alt="வி. பி. கந்தவேல்" style="width: 100%; border-radius: 8px;">
-            </div>
-            <div style="flex: 2; min-width: 300px;">
-                <h3>வி. பி. கந்தவேல்: ஒரு சமூக சேவகர்</h3>
-                <p>வி. பி. கந்தவேல், சூலூர் பகுதியின் முன்னேற்றத்திற்காக தன்னை அர்ப்பணித்துக் கொண்ட ஒரு பொது சேவகர். கடந்த பல ஆண்டுகளாக, மக்களின் அடிப்படைத் தேவைகளான குடிநீர், கல்வி மற்றும் சுகாதாரம் ஆகியவற்றை மேம்படுத்துவதில் கவனம் செலுத்தி வருகிறார். மக்களின் நம்பிக்கையை மூலதனமாகக் கொண்டு, உண்மையான சேவையை வழங்குவதே தனது தலையாய கடமை என்று நம்புகிறார்.</p>
-                <p>அவரது தலைமையின் கீழ், பல கிராமங்களில் பழுதடைந்த குடிநீர் குழாய்கள் சரிசெய்யப்பட்டு, மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கப்பட்டு, நூற்றுக்கணக்கான மருத்துவ முகாம்கள் நடத்தப்பட்டுள்ளன. சூலூரை ஒரு முன்மாதிரி தொகுதியாக மாற்றுவதே அவரது இலக்கு.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="initiatives" class="features">
-  <div class="container">
-    <h2 style="text-align: center; margin-bottom: 40px;">எங்கள் முக்கிய முயற்சிகள்</h2>
-    <div class="grid-3">
-      <article class="card feature">
-        <img src="https://i.imgur.com/GCR9i1u.jpeg" alt="தூய்மையான குடிநீர் திட்டம்">
-        <div class="pad">
-          <h3>தூய்மையான குடிநீர்</h3>
-          <p>குழாய்களைப் பழுதுபார்த்தல், கைப்பம்புகளை சரிசெய்தல் மற்றும் பாதுகாப்பான குடிநீர் கிடைப்பதை உறுதி செய்தல்.</p>
-        </div>
-      </article>
-      <article class="card feature">
-        <img src="https://i.imgur.com/mE8yF4p.jpeg" alt="கல்வி ஆதரவு">
-        <div class="pad">
-          <h3>கல்வி</h3>
-          <p>சூலூர் பகுதி மாணவர்களுக்கு கல்வி உதவித்தொகை, நோட்டுப் புத்தகங்கள் மற்றும் உயர்கல்விக்கான வழிகாட்டுதல்.</p>
-        </div>
-      </article>
-      <article class="card feature">
-        <img src="https://i.imgur.com/hYvW1fS.jpeg" alt="மருத்துவ முகாம்கள்">
-        <div class="pad">
-          <h3>மருத்துவம்</h3>
-          <p>கிராமப்புற மக்களுக்காக மருத்துவர்களுடன் இலவச மருத்துவ பரிசோதனை முகாம்கள் மற்றும் நடமாடும் மருத்துவமனைகள்.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="gallery">
-    <div class="container">
-        <h2 style="text-align: center; margin-bottom: 40px;">சேவையின் சில தருணங்கள்</h2>
-        <div class="grid-3">
-             <img src="https://i.imgur.com/p1d7x7J.jpeg" alt="மக்களுடன் கலந்துரையாடல்" style="width:100%; border-radius: 8px;">
-             <img src="https://i.imgur.com/YxO2jLg.jpeg" alt="கல்வி உபகரணங்கள் வழங்குதல்" style="width:100%; border-radius: 8px;">
-             <img src="https://i.imgur.com/XkC0e9R.jpeg" alt="குடிநீர் திட்ட தொடக்கம்" style="width:100%; border-radius: 8px;">
-        </div>
-    </div>
-</section>
-
-
-<section id="volunteer" class="callout">
-  <div class="container callout-inner">
-    <h2>ஒன்றிணைந்து ஒவ்வொரு தெருவையும் உயர்த்துவோம்.</h2>
-    <p>எங்கள் தன்னார்வலர் குழுவில் நீங்களும் ஒரு பகுதியாகுங்கள். முகாம்களை ஏற்பாடு செய்யவும், உள்ளூர் பிரச்சினைகளைக் கண்டறியவும், மாற்றத்தை ஏற்படுத்தவும் உதவுங்கள்.</p>
-    <a class="btn btn-primary" href="#contact">தன்னார்வலராகுங்கள்</a>
-  </div>
-</section>
-
-</main>
-<footer id="contact" class="site-footer">
-  <div class="container grid-3">
-    <div>
-      <h4>வி. பி. கந்தவேல்</h4>
-      <p>சூலூரில் சமூக சேவைக்காக அர்ப்பணிப்பு — தூய்மையான குடிநீர், கல்வி, மருத்துவம் மற்றும் சமூக மேம்பாடு.</p>
-    </div>
-    <div>
-      <h4>விரைவு இணைப்புகள்</h4>
-      <ul class="list-plain">
-        <li><a href="#about">எங்களைப் பற்றி</a></li>
-        <li><a href="#initiatives">முயற்சிகள்</a></li>
-        <li><a href="#gallery">புகைப்படங்கள்</a></li>
-        <li><a href="#volunteer">தன்னார்வலராகுங்கள்</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>தொடர்புக்கு</h4>
-      <ul class="list-plain">
-        <li><a href="https://www.facebook.com/VpkKandavel/" target="_blank" rel="noopener">முகநூல்</a></li>
-        <li><a href="mailto:contact.vpk@example.com">contact.vpk@example.com</a></li>
-        <li><a href="tel:+919841373309">+91 98413 73309</a></li>
-      </ul>
-      <p class="small">© <span id="year"></span> வி. பி. கந்தவேல். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-    </div>
-  </div>
-</footer>
-<script>
-  // Simple script to set the current year in the footer
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Basic mobile navigation toggle
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.nav');
-  navToggle.addEventListener('click', () => {
-    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', !isExpanded);
-    nav.classList.toggle('is-visible'); // Assuming .is-visible controls display in your CSS
-  });
-</script>
+  </footer>
+  
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    
+    // Scroll animations
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('animated');
+        }
+      });
+    };
+    
+    // Run on page load and scroll
+    window.addEventListener('DOMContentLoaded', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+    
+    // Active navigation link highlighting
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
