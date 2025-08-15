@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — V. P. Kandhavel</title>
+  <meta name="description" content="Contact team, report an issue, or join as a volunteer.">
+  <link rel="canonical" href="https://example.com/contact.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — V. P. Kandhavel">
+  <meta property="og:description" content="Contact team, report an issue, or join as a volunteer.">
+  <meta property="og:image" content="/assets/img/hero.jpg">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Person", "name": "V. P. Kandhavel", "image": "/assets/img/kandhavel.jpg", "jobTitle": "Public Servant", "url": "https://example.com/", "sameAs": ["https://www.facebook.com/VpkKandavel/"], "address": {"@type": "PostalAddress", "addressLocality": "Sulur", "addressRegion": "Tamil Nadu", "addressCountry": "IN"}}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/index.html">
+      <span class="brand-logo" aria-hidden="true">VPK</span>
+      <span class="brand-text">V. P. Kandhavel</span>
+    </a>
+    <button class="nav-toggle" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/initiatives.html">Initiatives</a>
+      <a href="/news.html">News</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/contact.html">Contact</a>
+      <a class="btn btn-primary" href="/contact.html#volunteer">Volunteer</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-header">
+  <div class="container narrow">
+    <h1>Contact & Join</h1>
+    <p class="lead">Reach the team, report a local issue, or volunteer.</p>
+  </div>
+</section>
+
+<section class="container grid-2 gap-2">
+  <div>
+    <h2 id="issue">Report an Issue</h2>
+    <form class="form" id="issueForm">
+      <label>Full Name<input required name="name" type="text" placeholder="Your name"></label>
+      <label>Phone<input required name="phone" type="tel" placeholder="+91 9XXXXXXXXX"></label>
+      <label>Ward / Area<input required name="area" type="text" placeholder="Your area"></label>
+      <label>Issue Details<textarea required name="details" rows="4" placeholder="Describe the issue"></textarea></label>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="btn btn-outline" type="button" id="issueWhatsApp">Send via WhatsApp</button>
+      </div>
+      <p class="small muted">Submitting will save the details locally and prepare a WhatsApp message to the team.</p>
+    </form>
+  </div>
+  <div id="volunteer">
+    <h2>Join as Volunteer</h2>
+    <form class="form" id="volunteerForm">
+      <label>Full Name<input required name="name" type="text" placeholder="Your name"></label>
+      <label>Phone<input required name="phone" type="tel" placeholder="+91 9XXXXXXXXX"></label>
+      <label>Skills / Interest<input name="skills" type="text" placeholder="e.g., event management, first aid"></label>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Join</button>
+        <button class="btn btn-outline" type="button" id="downloadCSV">Download Signups CSV</button>
+      </div>
+      <p class="small muted">Your details are stored locally in your browser. You can export them anytime.</p>
+    </form>
+  </div>
+</section>
+
+<section class="container card contact-card">
+  <div class="pad">
+    <h3>Team Contacts</h3>
+    <ul class="list-plain">
+      <li>Facebook: <a href="https://www.facebook.com/VpkKandavel/" target="_blank" rel="noopener">facebook.com/VpkKandavel</a></li>
+      <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
+      <li>Phone: <a href="tel:+919841373309">+91 98413 73309</a></li>
+      <li>Office: Sulur, Coimbatore, Tamil Nadu</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container grid-3">
+    <div>
+      <h4>V. P. Kandhavel</h4>
+      <p>Committed to social service in Sulur — clean water, education, healthcare and community development.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul class="list-plain">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/initiatives.html">Initiatives</a></li>
+        <li><a href="/news.html">News & Updates</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul class="list-plain">
+        <li><a href="https://www.facebook.com/VpkKandavel/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        <li><a href="tel:+919841373309">+91 98413 73309</a></li>
+      </ul>
+      <p class="small">© <span id="year"></span> V. P. Kandhavel. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
