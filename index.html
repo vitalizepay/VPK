@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://example.com/index-ta.html">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💧</text></svg>">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="வி. பி. கந்தவேல் — சூலூருக்கான சமூக சேவை">
   <meta property="og:description" content="சூலூரில் சமூக மேம்பாடு, தூய்மையான குடிநீர், கல்வி மற்றும் மருத்துவ சேவைகள்.">
@@ -41,6 +42,9 @@
       --transition: all 0.3s ease;
       --shadow: 0 4px 12px rgba(0,0,0,0.1);
       --shadow-hover: 0 8px 16px rgba(0,0,0,0.15);
+      --success: #28a745;
+      --warning: #ffc107;
+      --danger: #dc3545;
     }
     
     * {
@@ -152,6 +156,39 @@
       box-shadow: var(--shadow-hover);
     }
     
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+    
+    .btn-success:hover {
+      background: #218838;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .btn-warning {
+      background: var(--warning);
+      color: var(--dark);
+    }
+    
+    .btn-warning:hover {
+      background: #e0a800;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .btn-danger {
+      background: var(--danger);
+      color: white;
+    }
+    
+    .btn-danger:hover {
+      background: #c82333;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    
     .section {
       padding: 80px 0;
     }
@@ -170,6 +207,11 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       z-index: 1000;
       transition: var(--transition);
+    }
+    
+    .site-header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
     
     .nav-wrap {
@@ -206,6 +248,7 @@
       font-size: 1.5rem;
       cursor: pointer;
       color: var(--dark);
+      z-index: 1001;
     }
     
     .nav {
@@ -262,7 +305,7 @@
       right: 0;
       width: 50%;
       height: 100%;
-      background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
       background-size: cover;
       opacity: 0.9;
       border-radius: 0 0 0 100px;
@@ -354,6 +397,94 @@
       flex: 2;
     }
     
+    /* Testimonials */
+    .testimonials {
+      background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(26, 115, 232, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 100px 0;
+    }
+    
+    .testimonials h2 {
+      color: white;
+    }
+    
+    .testimonials h2:after {
+      background: var(--accent);
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 30px;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .testimonial-content:before,
+    .testimonial-content:after {
+      content: '"';
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.2);
+      position: absolute;
+    }
+    
+    .testimonial-content:before {
+      top: -20px;
+      left: -10px;
+    }
+    
+    .testimonial-content:after {
+      bottom: -40px;
+      right: -10px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+    }
+    
+    .testimonial-author img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .author-info h4 {
+      margin-bottom: 5px;
+      color: white;
+    }
+    
+    .author-info p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+    }
+    
     /* Initiatives */
     .initiatives-grid {
       display: grid;
@@ -401,6 +532,29 @@
       margin-bottom: 15px;
     }
     
+    .initiative-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+    
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+    
     /* Gallery */
     .gallery-grid {
       display: grid;
@@ -442,6 +596,99 @@
     
     .gallery-item:hover .gallery-overlay {
       opacity: 1;
+    }
+    
+    /* Events Section */
+    .events-timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto 0;
+      padding: 0 20px;
+    }
+    
+    .events-timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: var(--primary);
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      padding-right: calc(50% + 30px);
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      padding-left: calc(50% + 30px);
+    }
+    
+    .timeline-date {
+      position: absolute;
+      top: 0;
+      width: 120px;
+      padding: 8px 15px;
+      background: var(--primary);
+      color: white;
+      border-radius: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date {
+      right: calc(50% + 30px);
+    }
+    
+    .timeline-item:nth-child(even) .timeline-date {
+      left: calc(50% + 30px);
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    
+    .timeline-content:after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      background: white;
+      transform: rotate(45deg);
+      box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content:after {
+      right: -7px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content:after {
+      left: -7px;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      transform: translateX(-50%);
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--primary);
     }
     
     /* Callout */
@@ -491,6 +738,56 @@
       margin-right: auto;
     }
     
+    /* Contact Form */
+    .contact-form {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+      max-width: 800px;
+      margin: 40px auto 0;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .form-row .form-group {
+      flex: 1;
+    }
+    
     /* Footer */
     .site-footer {
       background: var(--dark);
@@ -513,6 +810,29 @@
     
     .footer-col p {
       color: #bdc1c6;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
     }
     
     .list-plain {
@@ -539,6 +859,83 @@
       font-size: 0.9rem;
     }
     
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 999;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+    
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    
+    .modal.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal-content {
+      background: white;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--gray);
+    }
+    
     /* Animations */
     .animate-on-scroll {
       opacity: 0;
@@ -549,6 +946,158 @@
     .animate-on-scroll.animated {
       opacity: 1;
       transform: translateY(0);
+    }
+    
+    /* New Features */
+    /* Progress Bars */
+    .progress-container {
+      margin: 30px 0;
+    }
+    
+    .progress-title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .progress-bar {
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 5px;
+      transition: width 1s ease;
+    }
+    
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 15px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .faq-question {
+      padding: 15px 20px;
+      background: #f8f9fa;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .faq-question:after {
+      content: '+';
+      font-size: 1.2rem;
+    }
+    
+    .faq-question.active:after {
+      content: '-';
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-answer.show {
+      padding: 15px 20px;
+      max-height: 500px;
+    }
+    
+    /* News Section */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .news-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .news-image {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .news-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .news-card:hover .news-image img {
+      transform: scale(1.05);
+    }
+    
+    .news-content {
+      padding: 20px;
+    }
+    
+    .news-date {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .news-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    /* Community Section */
+    .community-section {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .community-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    
+    .community-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .community-content h2 {
+      color: white;
+    }
+    
+    .community-content h2:after {
+      background: var(--accent);
     }
     
     /* Responsive */
@@ -568,6 +1117,33 @@
       .metrics {
         flex-wrap: wrap;
         justify-content: center;
+      }
+      
+      .events-timeline:before {
+        left: 30px;
+      }
+      
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-date,
+      .timeline-item:nth-child(even) .timeline-date {
+        left: 0;
+        right: auto;
+      }
+      
+      .timeline-dot {
+        left: 21px;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-content:after,
+      .timeline-item:nth-child(even) .timeline-content:after {
+        left: 15px;
+        right: auto;
       }
     }
     
@@ -614,6 +1190,29 @@
         flex-direction: column;
         gap: 10px;
       }
+      
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .metrics {
+        gap: 15px;
+      }
+      
+      .metric {
+        font-size: 2rem;
+      }
+      
+      .metrics span {
+        font-size: 0.8rem;
+      }
+      
+      .contact-form {
+        padding: 25px;
+      }
     }
   </style>
 </head>
@@ -631,7 +1230,11 @@
         <a href="#home" class="active">முகப்பு</a>
         <a href="#about">எங்களைப் பற்றி</a>
         <a href="#initiatives">முயற்சிகள்</a>
+        <a href="#events">நிகழ்வுகள்</a>
+        <a href="#news">செய்திகள்</a>
+        <a href="#faq">கேள்விகள்</a>
         <a href="#gallery">புகைப்படங்கள்</a>
+        <a href="#testimonials">மதிப்புரைகள்</a>
         <a href="#contact">தொடர்புக்கு</a>
         <a class="btn btn-primary" href="#volunteer">தன்னார்வலராகுங்கள்</a>
       </nav>
@@ -643,10 +1246,10 @@
       <div class="container hero-grid">
         <div class="hero-text animate-on-scroll">
           <h1>மக்களின் நம்பிக்கை. உண்மையான சேவை.</h1>
-          <p>சூலூரின் ஒவ்வொரு பகுதிக்கும் தூய்மையான குடிநீர், கல்வி உதவி மற்றும் மருத்துவ வசதிகளை அందిస్తున్నோம்.</p>
+          <p>சூலூரின் ஒவ்வொரு பகுதிக்கும் தூய்மையான குடிநீர், கல்வி உதவி மற்றும் மருத்துவ வசதிகளை அளிக்கிறோம்.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#initiatives">முயற்சிகளைக் காண்க</a>
-            <a class="btn btn-outline" href="#volunteer">தன்னார்வலராக சேர</a>
+            <a class="btn btn-outline" href="#contact">தொடர்பு கொள்ளவும்</a>
           </div>
           <div class="metrics">
             <div><span class="metric">120+</span><span>சரிசெய்யப்பட்ட குடிநீர் இணைப்புகள்</span></div>
@@ -666,8 +1269,12 @@
           </div>
           <div class="about-text animate-on-scroll">
             <h3>வி. பி. கந்தவேல்: ஒரு சமூக சேவகர்</h3>
-            <p>வி. பி. கந்தவேல், சூலூர் பகுதியின் முன்னேற்றத்திற்காக தன்னை அர்ப்பணித்துக் கொண்ட ஒரு பொது சேவகர். கடந்த பல ஆண்டுகளாக, மக்களின் அடிப்படைத் தேவைகளான குடிநீர், கல்வி மற்றும் சுகாதாரம் ஆகியவற்றை மேம்படுத்துவதில் கவனம் செலுத்தி வருகிறார். மக்களின் நம்பிக்கையை மூலதனமாகக் கொண்டு, உண்மையான சேவையை வழங்குவதே தனது தலையாய கடமை என்று நம்புகிறார்.</p>
+            <p>வி. பி. கந்தவேல், சூலூர் பகுதியின் முன்னேற்றத்திற்காக தன்னை அர்ப்பணித்துக் கொண்ட ஒரு பொது சேவகர். கடந்த பல ஆண்டுகளாக, மக்களின் அடிப்படைத் தேவைகளான குடிநீர், கல்வி மற்றும் சுகாதாரம் ஆகியவற்றை மேம்படுத்துவதில் கவனம் செலுத்தி வருகிறார்.</p>
             <p>அவரது தலைமையின் கீழ், பல கிராமங்களில் பழுதடைந்த குடிநீர் குழாய்கள் சரிசெய்யப்பட்டு, மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கப்பட்டு, நூற்றுக்கணக்கான மருத்துவ முகாம்கள் நடத்தப்பட்டுள்ளன. சூலூரை ஒரு முன்மாதிரி தொகுதியாக மாற்றுவதே அவரது இலக்கு.</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#initiatives">எங்கள் முயற்சிகள்</a>
+              <a class="btn btn-outline" href="#contact">தொடர்பு கொள்ளவும்</a>
+            </div>
           </div>
         </div>
       </div>
@@ -684,6 +1291,20 @@
             <div class="initiative-content">
               <h3>தூய்மையான குடிநீர்</h3>
               <p>குழாய்களைப் பழுதுபார்த்தல், கைப்பம்புகளை சரிசெய்தல் மற்றும் பாதுகாப்பான குடிநீர் கிடைப்பதை உறுதி செய்தல். கிராமங்களில் தூய்மையான குடிநீர் வழங்கும் திட்டங்களை செயல்படுத்துதல்.</p>
+              <div class="initiative-stats">
+                <div class="stat-item">
+                  <span class="stat-number">120+</span>
+                  <span class="stat-label">குடிநீர் இணைப்புகள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">15</span>
+                  <span class="stat-label">கிராமங்கள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5000+</span>
+                  <span class="stat-label">பயனாளிகள்</span>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -694,6 +1315,20 @@
             <div class="initiative-content">
               <h3>கல்வி</h3>
               <p>சூலூர் பகுதி மாணவர்களுக்கு கல்வி உதவித்தொகை, நோட்டுப் புத்தகங்கள் மற்றும் உயர்கல்விக்கான வழிகாட்டுதல். மாணவர்களின் கல்வி வளர்ச்சிக்கு தேவையான வசதிகளை வழங்குதல்.</p>
+              <div class="initiative-stats">
+                <div class="stat-item">
+                  <span class="stat-number">35</span>
+                  <span class="stat-label">மாணவர்கள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">5</span>
+                  <span class="stat-label">பள்ளிகள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">₹2.5L+</span>
+                  <span class="stat-label">உதவித்தொகை</span>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -704,7 +1339,181 @@
             <div class="initiative-content">
               <h3>மருத்துவம்</h3>
               <p>கிராமப்புற மக்களுக்காக மருத்துவர்களுடன் இலவச மருத்துவ பரிசோதனை முகாம்கள் மற்றும் நடமாடும் மருத்துவமனைகள். பொது சுகாதாரத்தை மேம்படுத்துவதற்கான நடவடிக்கைகள்.</p>
+              <div class="initiative-stats">
+                <div class="stat-item">
+                  <span class="stat-number">60+</span>
+                  <span class="stat-label">முகாம்கள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">3000+</span>
+                  <span class="stat-label">நோயாளிகள்</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">12</span>
+                  <span class="stat-label">மருத்துவர்கள்</span>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="progress" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">எங்கள் முன்னேற்றம்</h2>
+        <div class="progress-container animate-on-scroll">
+          <div class="progress-title">
+            <span>தூய்மையான குடிநீர் திட்டம்</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+        </div>
+        
+        <div class="progress-container animate-on-scroll">
+          <div class="progress-title">
+            <span>கல்வி உதவித்தொகை</span>
+            <span>60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%"></div>
+          </div>
+        </div>
+        
+        <div class="progress-container animate-on-scroll">
+          <div class="progress-title">
+            <span>மருத்துவ முகாம்கள்</span>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="community-section section">
+      <div class="community-content">
+        <h2 class="animate-on-scroll">சமூகத்துடன் இணைந்து</h2>
+        <p class="animate-on-scroll">சூலூர் சமூகத்தின் ஒவ்வொரு உறுப்பினருடனும் இணைந்து பணியாற்றி, அவர்களின் வாழ்க்கைத் தரத்தை உயர்த்துவதே எங்கள் நோக்கம்.</p>
+        <div class="hero-cta animate-on-scroll">
+          <a class="btn btn-primary" href="#volunteer">தன்னார்வலராகுங்கள்</a>
+          <a class="btn btn-outline" href="#contact">எங்களைத் தொடர்பு கொள்ளவும்</a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="events" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">வரவிருக்கும் நிகழ்வுகள்</h2>
+        <div class="events-timeline">
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-date">15 ஜூன் 2023</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>இலவச மருத்துவ முகாம்</h3>
+              <p>சூலூர் மேற்கு பகுதியில் இலவச மருத்துவ பரிசோதனை முகாம். சர்க்கரை நோய், இரத்த அழுத்தம் மற்றும் கண் பரிசோதனை உள்ளிட்டவை நடைபெறும்.</p>
+              <a href="#register" class="btn btn-primary" style="margin-top: 10px;">பதிவு செய்க</a>
+            </div>
+          </div>
+          
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-date">25 ஜூன் 2023</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>கல்வி உதவித்தொகை வழங்குதல்</h3>
+              <p>ஏழை மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கும் விழா. 10+2 மற்றும் பொறியியல் மாணவர்களுக்கான உதவித்தொகை.</p>
+              <a href="#register" class="btn btn-primary" style="margin-top: 10px;">விண்ணப்பிக்க</a>
+            </div>
+          </div>
+          
+          <div class="timeline-item animate-on-scroll">
+            <div class="timeline-date">5 ஜூலை 2023</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>சுற்றுச்சூழல் தூய்மை திட்டம்</h3>
+              <p>சூலூர் ஏரி பகுதியில் சுற்றுச்சூழல் தூய்மை முகாம். பொது மக்கள் மற்றும் மாணவர்கள் பங்கேற்க வரவேற்கப்படுகிறார்கள்.</p>
+              <a href="#register" class="btn btn-primary" style="margin-top: 10px;">பங்கேற்க</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">சமீபத்திய செய்திகள்</h2>
+        <div class="news-grid">
+          <div class="news-card animate-on-scroll">
+            <div class="news-image">
+              <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="சமூக சேவை">
+            </div>
+            <div class="news-content">
+              <div class="news-date">10 மே 2023</div>
+              <h3 class="news-title">சூலூர் கிழக்கில் புதிய குடிநீர் திட்டம் தொடக்கம்</h3>
+              <p>சூலூர் கிழக்கில் 5 கிராமங்களுக்கு புதிய குடிநீர் வசதிகள் அறிமுகப்படுத்தப்பட்டுள்ளன...</p>
+              <a href="#" class="btn btn-outline" style="margin-top: 15px;">மேலும் வாசிக்க</a>
+            </div>
+          </div>
+          
+          <div class="news-card animate-on-scroll">
+            <div class="news-image">
+              <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="கல்வி உதவி">
+            </div>
+            <div class="news-content">
+              <div class="news-date">25 ஏப்ரல் 2023</div>
+              <h3 class="news-title">20 மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கப்பட்டது</h3>
+              <p>இந்த ஆண்டு முதல் கட்டமாக 20 மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்கப்பட்டது...</p>
+              <a href="#" class="btn btn-outline" style="margin-top: 15px;">மேலும் வாசிக்க</a>
+            </div>
+          </div>
+          
+          <div class="news-card animate-on-scroll">
+            <div class="news-image">
+              <img src="https://images.unsplash.com/photo-1562077772-3bd90403f7f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="மருத்துவ முகாம்">
+            </div>
+            <div class="news-content">
+              <div class="news-date">15 ஏப்ரல் 2023</div>
+              <h3 class="news-title">இலவச மருத்துவ முகாம் வெற்றிகரமாக நடைபெற்றது</h3>
+              <p>சூலூர் மேற்கு பகுதியில் 500க்கும் மேற்பட்டோர் இலவச மருத்துவ பரிசோதனை பெற்றனர்...</p>
+              <a href="#" class="btn btn-outline" style="margin-top: 15px;">மேலும் வாசிக்க</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">அடிக்கடி கேட்கப்படும் கேள்விகள்</h2>
+        
+        <div class="faq-item animate-on-scroll">
+          <div class="faq-question">நான் எப்படி தன்னார்வலராக சேரலாம்?</div>
+          <div class="faq-answer">
+            <p>தன்னார்வலராக சேர்க்க "தன்னார்வலராகுங்கள்" பகுதியில் உள்ள படிவத்தை நிரப்பவும். எங்கள் குழு உங்களைத் தொடர்பு கொண்டு அடுத்து செய்ய வேண்டியவற்றை அறிவிக்கும்.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item animate-on-scroll">
+          <div class="faq-question">நன்கொடைகள் வரிவிலக்கு பெறலாமா?</div>
+          <div class="faq-answer">
+            <p>ஆம், எங்கள் அமைப்புக்கு அளிக்கப்படும் நன்கொடைகள் 80G விதியின் கீழ் வரிவிலக்கு பெறலாம். நன்கொடை அளித்த பிறகு உங்களுக்கு வரிவிலக்கு சான்றிதழ் அனுப்பப்படும்.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item animate-on-scroll">
+          <div class="faq-question">கல்வி உதவித்தொகைக்கு விண்ணப்பிக்கும் முறை என்ன?</div>
+          <div class="faq-answer">
+            <p>கல்வி உதவித்தொகைக்கு விண்ணப்பிக்க "நிகழ்வுகள்" பகுதியில் உள்ள தொடர்பு படிவத்தைப் பயன்படுத்தவும் அல்லது எங்கள் அலுவலகத்தை நேரடியாகத் தொடர்பு கொள்ளவும்.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item animate-on-scroll">
+          <div class="faq-question">எங்கள் கிராமத்திற்கு குடிநீர் திட்டம் செய்ய எப்படி கோரிக்கை செய்வது?</div>
+          <div class="faq-answer">
+            <p>"தொடர்புக்கு" பகுதியில் உள்ள படிவத்தில் உங்கள் கோரிக்கையை சமர்ப்பிக்கவும். கிராமத்தின் தேவை மற்றும் முன்னுரிமை அடிப்படையில் திட்டம் செயல்படுத்தப்படும்.</p>
           </div>
         </div>
       </div>
@@ -732,6 +1541,70 @@
               <h3>குடிநீர் திட்ட தொடக்கம்</h3>
             </div>
           </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="மருத்துவ முகாம்">
+            <div class="gallery-overlay">
+              <h3>மருத்துவ முகாம்</h3>
+            </div>
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="குழு பணி">
+            <div class="gallery-overlay">
+              <h3>குழு பணி</h3>
+            </div>
+          </div>
+          <div class="gallery-item animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="கல்வி விழா">
+            <div class="gallery-overlay">
+              <h3>கல்வி விழா</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials section">
+      <div class="container">
+        <h2 class="animate-on-scroll">மக்களின் குரல்</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-content">
+              <p>வி. பி. கந்தவேல் அவர்களின் முயற்சியால் எங்கள் கிராமத்திற்கு தூய்மையான குடிநீர் கிடைத்தது. 10 ஆண்டுகளுக்குப் பிறகு முதல் முறையாக குடிநீர் பிரச்சினை தீர்ந்தது.</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="ராமகிருஷ்ணன்">
+              <div class="author-info">
+                <h4>ராமகிருஷ்ணன்</h4>
+                <p>சூலூர் கிழக்கு</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-content">
+              <p>என் மகளுக்கு கல்வி உதவித்தொகை வழங்கியதால் பொறியியல் கல்லூரியில் சேர முடிந்தது. இவர்களின் உதவி இல்லையென்றால் இது சாத்தியமில்லை.</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="மாலதி">
+              <div class="author-info">
+                <h4>மாலதி</h4>
+                <p>சூலூர் மேற்கு</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-content">
+              <p>இலவச மருத்துவ முகாமில் எனது சர்க்கரை நோய் கண்டறியப்பட்டு சிகிச்சை பெற்றேன். இப்போது என் ஆரோக்கியம் மிகவும் நன்றாக உள்ளது.</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="கண்ணப்பன்">
+              <div class="author-info">
+                <h4>கண்ணப்பன்</h4>
+                <p>சூலூர் வடக்கு</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -740,17 +1613,57 @@
       <div class="container callout-inner">
         <h2 class="animate-on-scroll">ஒன்றிணைந்து ஒவ்வொரு தெருவையும் உயர்த்துவோம்.</h2>
         <p class="animate-on-scroll">எங்கள் தன்னார்வலர் குழுவில் நீங்களும் ஒரு பகுதியாகுங்கள். முகாம்களை ஏற்பாடு செய்யவும், உள்ளூர் பிரச்சினைகளைக் கண்டறியவும், மாற்றத்தை ஏற்படுத்தவும் உதவுங்கள்.</p>
-        <a class="btn btn-outline animate-on-scroll" href="#contact">தன்னார்வலராகுங்கள்</a>
+        <button class="btn btn-outline animate-on-scroll" id="volunteerBtn">தன்னார்வலராகுங்கள்</button>
+      </div>
+    </section>
+    
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">தொடர்புக்கு</h2>
+        <div class="contact-form animate-on-scroll">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label">உங்கள் பெயர்</label>
+                <input type="text" id="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">மின்னஞ்சல்</label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">தொலைபேசி எண்</label>
+              <input type="tel" id="phone" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">தலைப்பு</label>
+              <input type="text" id="subject" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">செய்தி</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">செய்தியை அனுப்பவும்</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
   
-  <footer id="contact" class="site-footer">
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col animate-on-scroll">
           <h4>வி. பி. கந்தவேல்</h4>
           <p>சூலூரில் சமூக சேவைக்காக அர்ப்பணிப்பு — தூய்மையான குடிநீர், கல்வி, மருத்துவம் மற்றும் சமூக மேம்பாடு.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/VpkKandavel/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
         
         <div class="footer-col animate-on-scroll">
@@ -758,7 +1671,11 @@
           <ul class="list-plain">
             <li><a href="#about">எங்களைப் பற்றி</a></li>
             <li><a href="#initiatives">முயற்சிகள்</a></li>
+            <li><a href="#events">நிகழ்வுகள்</a></li>
+            <li><a href="#news">செய்திகள்</a></li>
+            <li><a href="#faq">கேள்விகள்</a></li>
             <li><a href="#gallery">புகைப்படங்கள்</a></li>
+            <li><a href="#testimonials">மதிப்புரைகள்</a></li>
             <li><a href="#volunteer">தன்னார்வலராகுங்கள்</a></li>
           </ul>
         </div>
@@ -766,10 +1683,21 @@
         <div class="footer-col animate-on-scroll">
           <h4>தொடர்புக்கு</h4>
           <ul class="list-plain">
-            <li><a href="https://www.facebook.com/VpkKandavel/" target="_blank" rel="noopener">முகநூல்</a></li>
-            <li><a href="mailto:contact.vpk@example.com">contact.vpk@example.com</a></li>
-            <li><a href="tel:+919841373309">+91 98413 73309</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> 12/34, மெயின் ரோடு, சூலூர், தமிழ்நாடு</li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+919841373309">+91 98413 73309</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contact.vpk@example.com">contact.vpk@example.com</a></li>
+            <li><i class="fas fa-clock"></i> திங்கள் - சனி: 9:00 AM - 6:00 PM</li>
           </ul>
+          
+          <div style="margin-top: 20px;">
+            <h4>நியூஸ்லெட்டர்</h4>
+            <form id="newsletterForm" style="display: flex; margin-top: 10px;">
+              <input type="email" placeholder="உங்கள் மின்னஞ்சல்" required style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px 0 0 4px;">
+              <button type="submit" style="background: var(--primary); color: white; border: none; padding: 0 15px; border-radius: 0 4px 4px 0; cursor: pointer;">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       
@@ -778,6 +1706,69 @@
       </div>
     </div>
   </footer>
+  
+  <div class="back-to-top" id="backToTop" aria-label="மேலே செல்">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <!-- Volunteer Modal -->
+  <div class="modal" id="volunteerModal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h2>தன்னார்வலராக பதிவு செய்க</h2>
+      <form id="volunteerForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="v-name" class="form-label">முழு பெயர்</label>
+            <input type="text" id="v-name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="v-age" class="form-label">வயது</label>
+            <input type="number" id="v-age" class="form-control" required min="18">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="v-email" class="form-label">மின்னஞ்சல்</label>
+            <input type="email" id="v-email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="v-phone" class="form-label">தொலைபேசி எண்</label>
+            <input type="tel" id="v-phone" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="v-address" class="form-label">முகவரி</label>
+          <textarea id="v-address" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="v-interest" class="form-label">ஆர்வம் உள்ள பகுதி</label>
+          <select id="v-interest" class="form-control" required>
+            <option value="">தேர்ந்தெடுக்கவும்</option>
+            <option value="water">தூய்மையான குடிநீர் திட்டம்</option>
+            <option value="education">கல்வி முயற்சிகள்</option>
+            <option value="medical">மருத்துவ முகாம்கள்</option>
+            <option value="environment">சுற்றுச்சூழல் பராமரிப்பு</option>
+            <option value="all">அனைத்து பகுதிகளும்</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="v-skills" class="form-label">உங்கள் திறமைகள் (விரும்பினால்)</label>
+          <textarea id="v-skills" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="v-availability" class="form-label">உதவிக்கான நேரம்</label>
+          <select id="v-availability" class="form-control">
+            <option value="weekends">வார இறுதி நாட்கள்</option>
+            <option value="weekdays">வார நாட்கள்</option>
+            <option value="both">இரண்டும்</option>
+            <option value="flexible">நெகிழ்வான நேரம்</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">பதிவு செய்க</button>
+      </form>
+    </div>
+  </div>
   
   <script>
     // Set current year in footer
@@ -799,6 +1790,16 @@
         nav.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
     });
     
     // Scroll animations
@@ -842,6 +1843,121 @@
         }
       });
     });
+    
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Volunteer modal
+    const volunteerBtn = document.getElementById('volunteerBtn');
+    const volunteerModal = document.getElementById('volunteerModal');
+    const closeModal = document.getElementById('closeModal');
+    
+    volunteerBtn.addEventListener('click', () => {
+      volunteerModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeModal.addEventListener('click', () => {
+      volunteerModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === volunteerModal) {
+        volunteerModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // FAQ functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+        const answer = question.nextElementSibling;
+        answer.classList.toggle('show');
+      });
+    });
+    
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    const volunteerForm = document.getElementById('volunteerForm');
+    const newsletterForm = document.getElementById('newsletterForm');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('உங்கள் செய்தி வெற்றிகரமாக அனுப்பப்பட்டது! நாங்கள் விரைவில் உங்களைத் தொடர்பு கொள்வோம்.');
+      contactForm.reset();
+    });
+    
+    volunteerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('தன்னார்வலர் பதிவு வெற்றிகரமாக முடிந்தது! எங்கள் குழு உங்களைத் தொடர்பு கொள்ளும்.');
+      volunteerForm.reset();
+      volunteerModal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('நியூஸ்லெட்டருக்கு வெற்றிகரமாக பதிவு செய்யப்பட்டது!');
+      newsletterForm.reset();
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Animate progress bars when they come into view
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    const animateProgressBars = () => {
+      progressBars.forEach(bar => {
+        const barPosition = bar.parentElement.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (barPosition < screenPosition) {
+          const width = bar.style.width;
+          bar.style.width = '0';
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 100);
+        }
+      });
+    };
+    
+    window.addEventListener('load', animateProgressBars);
+    window.addEventListener('scroll', animateProgressBars);
   </script>
 </body>
 </html>
